@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>Eventbrite</members>
+		<name>NamedCredential</name>
+	</types>
+	<types>
+		<members>EBAttendees</members>
+		<members>EBAttendeesCallout</members>
+		<members>EBEvents</members>
+		<members>EBEventsCallout</members>
+		<members>EBSchema</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Eventbrite</members>
+		<name>PermissionSet</name>
+	</types>
+	<types>
+		<members>Eventbrite_Setting__mdt</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Eventbrite_Setting__mdt-Eventbrite Setting Layout</members>
+		<name>Layout</name>
+	</types>
+	<version>50.0</version>
+</Package>

@@ -6,7 +6,7 @@ if [ "$#" -eq 1 ]; then
   DURATION=$1
 fi
 
-sfdx force:org:create -a eventbrite -s -f config/project-scratch-def.json -d $DURATION
+sfdx force:org:create -a eventbrite3 -s -f config/project-scratch-def.json -d $DURATION
 sfdx force:source:push
 sfdx force:user:permset:assign -n Eventbrite
 echo "Org is set up"
