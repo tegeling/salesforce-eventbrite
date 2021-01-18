@@ -1,6 +1,6 @@
 public class EBEvents {
   public static EBSchema.EBEventsList getEvents(String setting) {
-    EBSchema.EBEventsList eventslist = null;
+    EBSchema.EBEventsList eventslist = new EBSchema.EBEventsList();
     // Get settings from metadata
     Eventbrite_Setting__mdt settings = [
       SELECT Private_Token__c, Organization_Id__c
@@ -19,7 +19,7 @@ public class EBEvents {
     request.setHeader('Authorization', 'Bearer ' + settings.Private_Token__c);
     request.setMethod('GET');
     HttpResponse response = http.send(request);
-    if (response.getStatusCode() == 200) {
+    if (response.getStatusCode() == 200 && response.getBody().length() > 0) {
       String responseHTML = response.getBody();
       String indexStart = '<pre><code class="language-json">';
       String indexEnd = '</code></pre>';
