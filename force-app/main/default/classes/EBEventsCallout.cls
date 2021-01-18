@@ -9,8 +9,8 @@ public with sharing class EBEventsCallout {
         newevt.Name = evt?.eventname?.text;
         newevt.eventid__c = evt?.id;
         newevt.url__c = evt?.url;
-        newevt.eventstart__c = evt?.eventstart?.local;
-        newevt.eventend__c = evt?.eventend?.local;
+        newevt.eventstart__c = evt?.eventstart?.utc;
+        newevt.eventend__c = evt?.eventend?.utc;
         newevt.organization_id__c = evt?.organization_id;
         newevt.created__c = evt?.created;
         newevt.changed__c = evt?.changed;

@@ -51,10 +51,13 @@ public class EBSchema {
   public class EBEventsStart {
     public String timezone;
     public Datetime local;
+    public Datetime utc;
   }
+
   public class EBEventsEnd {
     public String timezone;
     public Datetime local;
+    public Datetime utc;
   }
 
   public class EBProfile {
