@@ -45,36 +45,37 @@
         <label>Done</label>
         <locationX>176</locationX>
         <locationY>398</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <fields>
             <name>text2</name>
             <fieldText
-      >&lt;p&gt;Eventbrite Events retrieved.&lt;/p&gt;</fieldText>
+      >&lt;p&gt;Eventbrite Events retrieved and updated.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
+        <showHeader>false</showHeader>
     </screens>
     <screens>
         <name>Welcome</name>
         <label>Welcome</label>
         <locationX>176</locationX>
         <locationY>158</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <connector>
             <targetReference>Get_Eventbrite_Events</targetReference>
         </connector>
         <fields>
             <name>text1</name>
-            <fieldText>&lt;p&gt;Retrieve Eventbrite Events&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;Read events from your &lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Eventbrite organization and either update existing records or insert new records.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
+        <showHeader>false</showHeader>
     </screens>
     <start>
         <locationX>50</locationX>
