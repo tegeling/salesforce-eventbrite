@@ -2,10 +2,17 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "Eventbrite",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT"
     }
   ],
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "50.0"
+  "sourceApiVersion": "50.0",
+  "packageAliases": {
+    "Eventbrite": "0Ho5I000000GmfnSAC",
+    "Eventbrite@0.1.0-1": "04t5I000001mskPQAQ"
+  }
 }
