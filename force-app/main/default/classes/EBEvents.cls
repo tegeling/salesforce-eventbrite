@@ -20,28 +20,7 @@ public class EBEvents {
     request.setMethod('GET');
     HttpResponse response = http.send(request);
     if (response.getStatusCode() == 200 && response.getBody().length() > 0) {
-      String responseHTML = response.getBody();
-      String indexStart = '<pre><code class="language-json">';
-      String indexEnd = '</code></pre>';
-      String responseEscaped = responseHTML.substring(
-        responseHTML.indexOf(indexStart) + indexStart.length(),
-        responseHTML.indexOf(indexEnd)
-      );
-      // iterate through all line and remove line when match with "resource_uri"
-      // required because invalid JSON
-      List<String> responseJSONAllLines = responseEscaped.unescapeHtml4()
-        .split('\n');
-      String responseJSON = '';
-      String match = '"resource_uri"';
-      for (String line : responseJSONAllLines) {
-        if (!line.contains(match)) {
-          responseJSON += line;
-        }
-      }
-      responseJSON = responseJSON.replace('"name"', '"eventname"');
-      responseJSON = responseJSON.replace('"start"', '"eventstart"');
-      responseJSON = responseJSON.replace('"end"', '"eventend"');
-
+      String responseJSON = EBUtilities.formatBody(response.getBody());
       eventslist = (EBSchema.EBEventsList) JSON.deserialize(
         responseJSON,
         EBSchema.EBEventsList.class
