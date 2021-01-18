@@ -13,7 +13,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>eventname__c</field>
+                <field>eventid__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

@@ -2,7 +2,7 @@
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>All</fullName>
     <columns>NAME</columns>
-    <columns>eventname__c</columns>
+    <columns>eventid__c</columns>
     <columns>eventstart__c</columns>
     <columns>eventend__c</columns>
     <columns>status__c</columns>

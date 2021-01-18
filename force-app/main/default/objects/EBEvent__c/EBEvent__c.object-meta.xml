@@ -157,7 +157,7 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Eventbrite Event</label>
     <nameField>
-        <label>Event Id</label>
+        <label>Event Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Eventbrite Events</pluralLabel>
@@ -166,7 +166,7 @@
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
         <searchResultsAdditionalFields
-    >eventname__c</searchResultsAdditionalFields>
+    >eventid__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields
     >eventstart__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields

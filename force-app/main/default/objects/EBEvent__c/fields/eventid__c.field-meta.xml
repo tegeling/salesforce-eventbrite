@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>eventname__c</fullName>
-    <description>Event name</description>
+    <fullName>eventid__c</fullName>
+    <description>Eventbrite Event Identifier</description>
     <externalId>false</externalId>
-    <inlineHelpText>Event name</inlineHelpText>
-    <label>Name</label>
+    <inlineHelpText>Eventbrite Event Identifier</inlineHelpText>
+    <label>Event Id</label>
     <length>255</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
