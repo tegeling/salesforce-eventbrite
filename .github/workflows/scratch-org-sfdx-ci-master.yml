@@ -37,8 +37,8 @@ jobs:
         run: npm run prettier:verify
 
       # ESlint
-      - name: "Lint Lightning Web Components"
-        run: npm run lint:lwc
+      #- name: "Lint Lightning Web Components"
+      #  run: npm run lint:lwc
 
       # Unit tests
       #- name: "Unit test Lightning Web Components"
