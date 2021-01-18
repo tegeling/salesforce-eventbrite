@@ -1,0 +1,3 @@
+SELECT Private_Token__c, Organization_Id__c
+      FROM Eventbrite_Setting__mdt
+      WHERE DeveloperName = 'EBSettings'
