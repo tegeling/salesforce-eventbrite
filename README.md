@@ -8,7 +8,7 @@ This repository contain Salesforce SFDX resources to integrate Salesforce with E
 It retrieves records from Eventbrite via Rest API and stores records in Salesforce custom objects.
 
 Installation link for Sandbox Orgs
-https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5I000001mskjQAA
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5I000001mskoQAA
 
 Installation link for Production Orgs
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5I000001mskjQAA
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5I000001mskoQAA
