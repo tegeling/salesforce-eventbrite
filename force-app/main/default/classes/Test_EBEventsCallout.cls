@@ -1,7 +1,7 @@
 @IsTest
 private class Test_EBEventsCallout {
   @IsTest
-  private static void testGetEventsEmptyBody() {
+  private static void testGetEventsNoData() {
     Test.setMock(HttpCalloutMock.class, new Test_EBEventsCalloutMock());
     Test.startTest();
     List<EBEventsCallout.EBEventsRequest> inputParams = new List<EBEventsCallout.EBEventsRequest>();

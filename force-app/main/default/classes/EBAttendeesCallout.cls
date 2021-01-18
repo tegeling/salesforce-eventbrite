@@ -5,26 +5,29 @@ public class EBAttendeesCallout {
       settings,
       eventId
     );
-    System.debug(
-      '#### total number of attendees: ' + attendeelist?.attendees.size()
-    );
-    for (EBSchema.EBAttendees att : attendeelist?.attendees) {
-      System.debug('#### Attendee id: ' + att?.id);
-      System.debug('#### Attendee changed: ' + att?.changed);
-      System.debug('#### Attendee created: ' + att?.created);
-      System.debug('#### Attendee quantity: ' + att?.quantity);
-      System.debug('#### Attendee first_name: ' + att?.profile.first_name);
-      System.debug('#### Attendee last_name: ' + att?.profile.last_name);
-      System.debug('#### Attendee email: ' + att?.profile.email);
-      System.debug('#### Attendee status: ' + att?.status);
+    if (attendeelist.attendees != null) {
       System.debug(
-        '#### Attendee ticket_class_name: ' + att?.ticket_class_name
+        '#### total number of attendees: ' + attendeelist?.attendees.size()
       );
-      System.debug('#### Attendee event_id: ' + att?.event_id);
-      System.debug('#### Attendee order_id: ' + att?.order_id);
-      System.debug('#### Attendee ticket_class_id: ' + att?.ticket_class_id);
+      for (EBSchema.EBAttendees att : attendeelist?.attendees) {
+        System.debug('#### Attendee id: ' + att?.id);
+        System.debug('#### Attendee changed: ' + att?.changed);
+        System.debug('#### Attendee created: ' + att?.created);
+        System.debug('#### Attendee quantity: ' + att?.quantity);
+        System.debug('#### Attendee first_name: ' + att?.profile.first_name);
+        System.debug('#### Attendee last_name: ' + att?.profile.last_name);
+        System.debug('#### Attendee email: ' + att?.profile.email);
+        System.debug('#### Attendee status: ' + att?.status);
+        System.debug(
+          '#### Attendee ticket_class_name: ' + att?.ticket_class_name
+        );
+        System.debug('#### Attendee event_id: ' + att?.event_id);
+        System.debug('#### Attendee order_id: ' + att?.order_id);
+        System.debug('#### Attendee ticket_class_id: ' + att?.ticket_class_id);
+      }
     }
   }
+
   public class EBAttendeesRequest {
     @InvocableVariable(
       label='Eventbrite Settings'
