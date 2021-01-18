@@ -34,7 +34,7 @@ See https://www.eventbrite.com/platform/docs/organizations for more details.
 In Salesforce Setup you find under `Custom Metadata Type` an entry for `Eventbrite Settings`. Open `Manage Records` and edit the entry `EBSettings`.
 Enter and save your values for **Organization Id** and **Private Token** from above.
 
-# How to use Saleforce Eventbrite Integration
+# How to use Salesforce Eventbrite Integration
 
 After you have finished the setup steps you are ready to use the integration.
 This package provides integration with [Eventbrite Events](https://www.eventbrite.com/platform/api#/reference/event) and [Eventbrite Attendees](https://www.eventbrite.com/platform/api#/reference/attendee).
