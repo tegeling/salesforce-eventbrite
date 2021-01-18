@@ -141,7 +141,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Event_Compact_Layout</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <description
   >Object contains records from Eventbrite event details. Records are populated via API calls.</description>
@@ -161,7 +161,19 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Eventbrite Events</pluralLabel>
-    <searchLayouts />
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <searchResultsAdditionalFields
+    >eventname__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >eventstart__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >eventend__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>url__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

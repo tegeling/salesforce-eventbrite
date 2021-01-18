@@ -9,4 +9,5 @@ fi
 sfdx force:org:create -a eventbrite -s -f config/project-scratch-def.json -d $DURATION
 sfdx force:source:push
 sfdx force:user:permset:assign -n Eventbrite
+sfdx force:org:open -p /lightning/o/EBEvent__c/home
 echo "Org is set up"

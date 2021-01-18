@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>organization_id__c</fullName>
+    <description>Event is owned by this Organization.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Event is owned by this Organization.</inlineHelpText>
+    <label>Organization Id</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

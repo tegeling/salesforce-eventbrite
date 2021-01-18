@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>status__c</fullName>
+    <description
+  >Event status. Can be draft, live, started, ended, completed and canceled.</description>
+    <externalId>false</externalId>
+    <inlineHelpText
+  >Event status. Can be draft, live, started, ended, completed and canceled.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>draft</fullName>
+                <default>false</default>
+                <label>draft</label>
+            </value>
+            <value>
+                <fullName>live</fullName>
+                <default>false</default>
+                <label>live</label>
+            </value>
+            <value>
+                <fullName>started</fullName>
+                <default>false</default>
+                <label>started</label>
+            </value>
+            <value>
+                <fullName>ended</fullName>
+                <default>false</default>
+                <label>ended</label>
+            </value>
+            <value>
+                <fullName>completed</fullName>
+                <default>false</default>
+                <label>completed</label>
+            </value>
+            <value>
+                <fullName>canceled</fullName>
+                <default>false</default>
+                <label>canceled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
