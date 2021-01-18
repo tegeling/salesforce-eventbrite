@@ -5,7 +5,7 @@ name: Salesforce DX (scratch org)
 on:
   push:
     branches:
-      - master
+      - main
 
 # Jobs to be executed
 jobs:
@@ -88,11 +88,11 @@ jobs:
 
       # Assign permissionset
       - name: "Assign permissionset to default user"
-        run: "sfdx force:user:permset:assign -n Geocoding"
+        run: "sfdx force:user:permset:assign -n Eventbrite"
 
       # Import sample data
-      - name: "Import sample data"
-        run: "sfdx force:data:tree:import --plan ./data/Anlagen__c-plan.json"
+      #- name: "Import sample data"
+      #  run: "sfdx force:data:tree:import --plan ./data/Anlagen__c-plan.json"
 
       # Run Apex tests in scratch org
       - name: "Run Apex tests"
