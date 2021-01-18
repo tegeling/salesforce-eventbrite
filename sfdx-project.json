@@ -13,6 +13,8 @@
   "sourceApiVersion": "50.0",
   "packageAliases": {
     "Eventbrite": "0Ho5I000000GmfnSAC",
-    "Eventbrite@0.1.0-1": "04t5I000001mskPQAQ"
+    "Eventbrite@0.1.0-1": "04t5I000001mskPQAQ",
+    "Eventbrite@0.1.0-2": "04t5I000001mskeQAA",
+    "Eventbrite@0.1.0-3": "04t5I000001mskjQAA"
   }
 }
