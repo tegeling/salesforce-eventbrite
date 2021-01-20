@@ -12,7 +12,8 @@ private class Test_EBAttendeesCallout {
     EBAttendeesCallout.getEventbriteAttendees(inputParams);
     Test.stopTest();
     // runs callout and check results
-    System.assert(true);
+    List<EBAttendee__c> allattendees = [SELECT Id FROM EBAttendee__c];
+    System.assertEquals(allattendees.size(), 0, 'Expected record count is 0.');
   }
 
   @IsTest
@@ -27,9 +28,13 @@ private class Test_EBAttendeesCallout {
     p1.settings = 'EBSettings';
     p1.eventId = 'event_id';
     inputParams.add(p1);
+    EBEvent__c evt = new EBEvent__c();
+    evt.eventid__c = 'event_id';
+    insert evt;
     EBAttendeesCallout.getEventbriteAttendees(inputParams);
     Test.stopTest();
     // runs callout and check results
-    System.assert(true);
+    List<EBAttendee__c> allattendees = [SELECT Id FROM EBAttendee__c];
+    System.assertEquals(allattendees.size(), 1, 'Expected record count is 1.');
   }
 }

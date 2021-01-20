@@ -6,12 +6,12 @@ public class EBAttendeesCallout {
       eventId
     );
     List<EBAttendee__c> newAttendees = new List<EBAttendee__c>();
-    EBEvent__c relatedEvent = [
+    List<EBEvent__c> relatedEvent = [
       SELECT Id
       FROM EBEvent__c
       WHERE eventid__c = :eventId
     ];
-    if (attendeelist.attendees != null) {
+    if (attendeelist.attendees != null && relatedEvent.size() == 1) {
       for (EBSchema.EBAttendees att : attendeelist?.attendees) {
         EBAttendee__c newAtt = new EBAttendee__c();
         newAtt.id__c = att?.id;
@@ -27,7 +27,7 @@ public class EBAttendeesCallout {
         newAtt.ticket_class_id__c = att?.ticket_class_id;
         newAtt.event_id__c = att?.event_id;
         newAtt.order_id__c = att?.order_id;
-        newAtt.EBEvent__c = relatedEvent?.Id;
+        newAtt.EBEvent__c = relatedEvent[0]?.Id;
         newAttendees.add(newAtt);
       }
     }
