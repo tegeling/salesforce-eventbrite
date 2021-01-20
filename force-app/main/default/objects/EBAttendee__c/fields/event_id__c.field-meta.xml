@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>event_id__c</fullName>
+    <description>Event ID of the Attendee&apos;s Event.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Event ID of the Attendee&apos;s Event.</inlineHelpText>
+    <label>Event Id</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

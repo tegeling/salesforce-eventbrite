@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Get_Eventbrite_Attendees</name>
+        <label>Get Eventbrite Attendees</label>
+        <locationX>264</locationX>
+        <locationY>638</locationY>
+        <actionName>EBAttendeesCallout</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>For_Each_EBEvent</targetReference>
+        </connector>
+        <inputParameters>
+            <name>eventId</name>
+            <value>
+                <elementReference>For_Each_EBEvent.eventid__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>settings</name>
+            <value>
+                <stringValue>EBSettings</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>Get_Eventbrite_Events</name>
         <label>Get Eventbrite Events</label>
         <locationX>176</locationX>
@@ -8,7 +31,7 @@
         <actionName>EBEventsCallout</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Done</targetReference>
+            <targetReference>Get_EBEvents</targetReference>
         </connector>
         <inputParameters>
             <name>settings</name>
@@ -21,6 +44,20 @@
     <interviewLabel
   >Get Eventbrite Events {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Get Eventbrite Events</label>
+    <loops>
+        <name>For_Each_EBEvent</name>
+        <label>For Each EBEvent</label>
+        <locationX>176</locationX>
+        <locationY>518</locationY>
+        <collectionReference>Get_EBEvents</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Get_Eventbrite_Attendees</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Done</targetReference>
+        </noMoreValuesConnector>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -40,11 +77,25 @@
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_EBEvents</name>
+        <label>Get EBEvents</label>
+        <locationX>176</locationX>
+        <locationY>398</locationY>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>For_Each_EBEvent</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>EBEvent__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <screens>
         <name>Done</name>
         <label>Done</label>
         <locationX>176</locationX>
-        <locationY>398</locationY>
+        <locationY>854</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>

@@ -5,8 +5,10 @@
     <columns>eventstart__c</columns>
     <columns>eventend__c</columns>
     <columns>status__c</columns>
-    <columns>url__c</columns>
     <columns>capacity__c</columns>
+    <columns>attending__c</columns>
+    <columns>not_attending__c</columns>
+    <columns>checked_in__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>

@@ -32,7 +32,7 @@
                 <componentInstanceProperties>
                     <name>label</name>
                     <type>decorator</type>
-                    <value>Retrieve Eventbrite Events</value>
+                    <value>Retrieve Eventbrite Data</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>scrollable</name>
