@@ -11,7 +11,8 @@ private class Test_EBEventsCallout {
     EBEventsCallout.getEventbriteEvents(inputParams);
     Test.stopTest();
     // runs callout and check results
-    System.assert(true);
+    List<EBEvent__c> allevents = [SELECT Id FROM EBEvent__c];
+    System.assertEquals(allevents.size(), 0, 'Expected record count is 0.');
   }
   @IsTest
   private static void testGetEventsWithData() {
@@ -24,6 +25,7 @@ private class Test_EBEventsCallout {
     EBEventsCallout.getEventbriteEvents(inputParams);
     Test.stopTest();
     // runs callout and check results
-    System.assert(true);
+    List<EBEvent__c> allevents = [SELECT Id FROM EBEvent__c];
+    System.assertEquals(allevents.size(), 1, 'Expected record count is 1.');
   }
 }
