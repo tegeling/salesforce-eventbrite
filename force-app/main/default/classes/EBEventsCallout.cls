@@ -2,19 +2,31 @@ public with sharing class EBEventsCallout {
   @future(callout=true)
   public static void getEvents(String settings) {
     EBSchema.EBEventsList eventslist = EBEvents.getEvents(settings);
+    List<EBEvent__c> newevents = new List<EBEvent__c>();
     if (eventslist.events != null) {
-      System.debug('#### total number of events: ' + eventslist?.events.size());
       for (EBSchema.EBEvents evt : eventslist?.events) {
-        System.debug('#### Event Name: ' + evt?.eventname?.text);
-        System.debug('#### Event Description: ' + evt?.description?.text);
-        System.debug('#### Event URL: ' + evt?.url);
-        System.debug('#### Event Startdate: ' + evt?.eventstart?.local);
-        System.debug('#### Event Enddate: ' + evt?.eventend?.local);
-        System.debug('#### Event Published: ' + evt?.published);
-        System.debug('#### Event Capacity: ' + evt?.capacity);
-        System.debug('#### Event Listed: ' + evt?.listed);
-        System.debug('#### Event Id: ' + evt?.id);
+        EBEvent__c newevt = new EBEvent__c();
+        newevt.Name = evt?.eventname?.text;
+        newevt.eventid__c = evt?.id;
+        newevt.url__c = evt?.url;
+        newevt.eventstart__c = evt?.eventstart?.utc;
+        newevt.eventend__c = evt?.eventend?.utc;
+        newevt.organization_id__c = evt?.organization_id;
+        newevt.created__c = evt?.created;
+        newevt.changed__c = evt?.changed;
+        newevt.published__c = evt?.published;
+        newevt.capacity__c = evt?.capacity;
+        newevt.capacity_is_custom__c = evt?.capacity_is_custom;
+        newevt.status__c = evt?.status;
+        newevt.listed__c = evt?.listed;
+        newevt.summary__c = evt?.summary;
+        newevents.add(newevt);
       }
+    }
+    try {
+      upsert newevents eventid__c;
+    } catch (DmlException e) {
+      System.debug(e.getMessage());
     }
   }
 

@@ -36,6 +36,8 @@ public class EBSchema {
     public String event_id;
     public String order_id;
     public String ticket_class_id;
+    public Boolean checked_in;
+    public Boolean cancelled;
   }
 
   public class EBEventsName {
@@ -51,15 +53,19 @@ public class EBSchema {
   public class EBEventsStart {
     public String timezone;
     public Datetime local;
+    public Datetime utc;
   }
+
   public class EBEventsEnd {
     public String timezone;
     public Datetime local;
+    public Datetime utc;
   }
 
   public class EBProfile {
     public String first_name;
     public String last_name;
     public String email;
+    public String eventname;
   }
 }

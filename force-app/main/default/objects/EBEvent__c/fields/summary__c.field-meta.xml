@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>summary__c</fullName>
+    <description
+  >Event summary. Short summary describing the event and its purpose.</description>
+    <externalId>false</externalId>
+    <inlineHelpText
+  >Event summary. Short summary describing the event and its purpose.</inlineHelpText>
+    <label>Summary</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

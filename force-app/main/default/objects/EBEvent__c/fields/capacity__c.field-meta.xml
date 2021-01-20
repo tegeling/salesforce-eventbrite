@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>capacity__c</fullName>
+    <description
+  >Maximum number of tickets for the Event that can be sold to Attendees. The total capacity is calculated by the sum of the quantity_total of the Ticket Class.</description>
+    <externalId>false</externalId>
+    <inlineHelpText
+  >Maximum number of tickets for the Event that can be sold to Attendees. The total capacity is calculated by the sum of the quantity_total of the Ticket Class.</inlineHelpText>
+    <label>Capacity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

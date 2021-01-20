@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#F36025</headerColor>
+        <logo>logowhitecircle</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description
+  >Salesforce Eventbrite integration for events and attendees</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Eventbrite</label>
+    <navType>Standard</navType>
+    <tabs>EBEvent__c</tabs>
+    <tabs>EBAttendee__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Eventbrite_UtilityBar</utilityBar>
+</CustomApplication>
