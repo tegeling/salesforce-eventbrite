@@ -4,9 +4,9 @@
       "path": "force-app",
       "default": true,
       "package": "Eventbrite Integration",
-      "versionName": "Winter '21 v1",
+      "versionName": "Winter '21 v2",
       "versionDescription": "Winter '21 Release - Rest API integration with event and attendee data",
-      "versionNumber": "1.0.0.NEXT",
+      "versionNumber": "2.0.0.NEXT",
       "releaseNotesUrl": "https://github.com/tegeling/salesforce-eventbrite",
       "postInstallUrl": "https://github.com/tegeling/salesforce-eventbrite"
     }
@@ -16,6 +16,7 @@
   "sourceApiVersion": "50.0",
   "packageAliases": {
     "Eventbrite Integration": "0Ho5I000000GmfsSAC",
-    "Eventbrite Integration@1.0.0-1": "04t5I000001mskoQAA"
+    "Eventbrite Integration@1.0.0-1": "04t5I000001mskoQAA",
+    "Eventbrite Integration@2.0.0-1": "04t5I000001mslhQAA"
   }
 }

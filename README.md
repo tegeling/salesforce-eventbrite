@@ -2,14 +2,14 @@
 
 [![Github Workflow](<https://github.com/tegeling/salesforce-eventbrite/workflows/Salesforce%20DX%20(scratch%20org)/badge.svg?branch=main>)](https://github.com/tegeling/salesforce-eventbrite/actions?query=workflow%3A%22Salesforce+DX+%28scratch+org%29%22) [![codecov](https://codecov.io/gh/tegeling/salesforce-eventbrite/branch/main/graph/badge.svg?token=G67C6FTWLJ)](https://codecov.io/gh/tegeling/salesforce-eventbrite)
 
-This repository contain Salesforce SFDX resources to integrate Salesforce with Eventbrite and retrieve event and attendee records.
-It retrieves records from Eventbrite via Rest API and stores records in Salesforce custom objects.
+This repository contains Salesforce SFDX resources to integrate Salesforce with Eventbrite and retrieve event and attendee records.
+It retrieves records from Eventbrite via Rest API and stores records in Salesforce custom objects. Use the new Eventbrite App to retrieve data via flow embedded in a utility bar.
 
 Installation link for Sandbox Orgs
-https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5I000001mskoQAA
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5I000001mslhQAA
 
 Installation link for Production Orgs
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5I000001mskoQAA
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5I000001mslhQAA
 
 # Setup Instructions
 
@@ -42,8 +42,14 @@ This package provides integration with [Eventbrite Events](https://www.eventbrit
 ## Eventbrite Events via Apex
 
 Use Apex class [`EBEvents`](https://github.com/tegeling/salesforce-eventbrite/blob/main/force-app/main/default/classes/EBEvents.cls) to retrieve all events from your specific organization. The required input parameter contains the custom metadata record developer name. The return value is an Apex class [`EBSchema.EBEventsList`](https://github.com/tegeling/salesforce-eventbrite/blob/main/force-app/main/default/classes/EBSchema.cls) containing all Eventbrite event data including the unique event id.
+The records are upserted into custom object `EBEvent__c`.
 
 ## Eventbrite Attendees via Apex
 
 Use Apex class [`EBAttendees`](https://github.com/tegeling/salesforce-eventbrite/blob/main/force-app/main/default/classes/EBAttendees.cls) to retrieve all attendees from a specific event. The required input parameter contains the custom metadata record developer name and the event id from the previous call.
 The return value is an Apex class [`EBSchema.EBAttendeeList`](https://github.com/tegeling/salesforce-eventbrite/blob/main/force-app/main/default/classes/EBSchema.cls) containing all attendee records.
+The recoords retrieved are upserted into custom object `EBAttendee__c`.
+
+## Use a flow to retrieve data from Eventbrite
+
+This solution provides a flow to invoke the Apex classes. The sample flow retrieves all Eventbrite events and then iterates over all events and retrieves the attendees for each event.
