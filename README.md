@@ -31,13 +31,17 @@ See https://www.eventbrite.com/platform/docs/organizations for more details.
 
 ## Update Custom Metadata record
 
-In Salesforce Setup you find under `Custom Metadata Type` an entry for `Eventbrite Settings`. Open `Manage Records` and edit the entry `EBSettings`.
+In Salesforce Setup you find under `Custom Metadata Type` an entry for `Eventbrite Setting`. Open `Manage Records` and edit the entry `EBSettings`.
 Enter and save your values for **Organization Id** and **Private Token** from above.
+
+![Custom Metadata](./screenshots/CustomMetadata.png)
 
 # How to use Salesforce Eventbrite Integration
 
 After you have finished the setup steps you are ready to use the integration.
 This package provides integration with [Eventbrite Events](https://www.eventbrite.com/platform/api#/reference/event) and [Eventbrite Attendees](https://www.eventbrite.com/platform/api#/reference/attendee).
+
+![Utility Bar](./screenshots/UtilityBar.png)
 
 ## Eventbrite Events via Apex
 
@@ -53,3 +57,5 @@ The recoords retrieved are upserted into custom object `EBAttendee__c`.
 ## Use a flow to retrieve data from Eventbrite
 
 This solution provides a flow to invoke the Apex classes. The sample flow retrieves all Eventbrite events and then iterates over all events and retrieves the attendees for each event.
+
+![Flow](./screenshots/Flow.png)
