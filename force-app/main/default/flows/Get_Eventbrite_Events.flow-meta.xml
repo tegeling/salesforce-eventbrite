@@ -40,6 +40,14 @@
             </value>
         </inputParameters>
     </actionCalls>
+    <actionCalls>
+        <name>MinimizeUtilityBar</name>
+        <label>MinimizeUtilityBar</label>
+        <locationX>176</locationX>
+        <locationY>974</locationY>
+        <actionName>c:MinimizeUtilityBar</actionName>
+        <actionType>component</actionType>
+    </actionCalls>
     <apiVersion>50.0</apiVersion>
     <interviewLabel
   >Get Eventbrite Events {!$Flow.CurrentDateTime}</interviewLabel>
@@ -99,10 +107,13 @@
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <connector>
+            <targetReference>MinimizeUtilityBar</targetReference>
+        </connector>
         <fields>
             <name>text2</name>
             <fieldText
-      >&lt;p&gt;Eventbrite Events retrieved and updated.&lt;/p&gt;</fieldText>
+      >&lt;p&gt;The request is started and all event and attendees will be retrieved.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -122,7 +133,7 @@
         <fields>
             <name>text1</name>
             <fieldText
-      >&lt;p&gt;Read events from your &lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Eventbrite organization and either update existing records or insert new records.&lt;/span&gt;&lt;/p&gt;</fieldText>
+      >&lt;p&gt;Read all events and attendees from your &lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;Eventbrite organization and either update existing records or insert new records.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
