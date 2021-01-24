@@ -29,7 +29,7 @@ private class Test_EBAttendeesCallout {
     Test.stopTest();
     // runs callout and check results
     List<EBAttendee__c> allattendees = [SELECT Id FROM EBAttendee__c];
-    System.assertEquals(allattendees.size(), 0, 'Expected record count is 0.');
+    System.assertEquals(allattendees.size(), 0, 'Expected record size is 0.');
   }
 
   @IsTest
@@ -67,6 +67,6 @@ private class Test_EBAttendeesCallout {
     Test.stopTest();
     // runs callout and check results
     List<EBAttendee__c> allattendees = [SELECT Id FROM EBAttendee__c];
-    System.assertEquals(allattendees.size(), 1, 'Expected record count is 1.');
+    System.assertEquals(allattendees.size(), 1, 'Expected record size is 1.');
   }
 }
