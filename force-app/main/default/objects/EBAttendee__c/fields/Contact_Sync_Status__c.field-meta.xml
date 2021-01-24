@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Sync_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Sync Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not synced</fullName>
+                <default>true</default>
+                <label>Not synced</label>
+            </value>
+            <value>
+                <fullName>No match found</fullName>
+                <default>false</default>
+                <label>No match found</label>
+            </value>
+            <value>
+                <fullName>Match found but not synced</fullName>
+                <default>false</default>
+                <label>Match found but not synced</label>
+            </value>
+            <value>
+                <fullName>Duplicates found</fullName>
+                <default>false</default>
+                <label>Duplicates found</label>
+            </value>
+            <value>
+                <fullName>Synced</fullName>
+                <default>false</default>
+                <label>Synced</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
